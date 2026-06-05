@@ -25,5 +25,9 @@ https://iwufai-dotcom.github.io/pandaai-dark-fluid-html-v01/
 Verification:
 
 ```text
-pending
+GitHub Pages status: built
+Homepage HTTP status: 200
+Logo asset HTTP status: 200
+Verified at: 2026-06-05T17:41+08:00
+Initial publish commit: 02840c2
 ```
