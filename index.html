@@ -1,0 +1,3117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="pandaai-dark-fluid-html-v01">
+  <title>PandaAI AI量化人才培养科教方案｜Dark Fluid HTML Retest</title>
+  <style>
+    :root {
+      --bg: #121212;
+      --ink: #f6f4ef;
+      --muted: rgba(246, 244, 239, .66);
+      --dim: rgba(246, 244, 239, .38);
+      --line: rgba(255, 255, 255, .13);
+      --panel: rgba(255, 255, 255, .065);
+      --panel-strong: rgba(255, 255, 255, .105);
+      --violet: #7b35ff;
+      --violet-soft: #b88cff;
+      --cyan: #8cecff;
+      --mint: #a8ffe4;
+      --pink: #ff65c8;
+      --shadow: 0 4.4vh 9vh rgba(0, 0, 0, .45);
+      --radius: clamp(16px, 2vw, 30px);
+      --pad-x: clamp(28px, 6vw, 92px);
+      --pad-y: clamp(24px, 5vh, 68px);
+      font-family: "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #0e0e0f;
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% -12%, rgba(124, 53, 255, .34), transparent 35vh),
+        radial-gradient(circle at 88% 82%, rgba(140, 236, 255, .10), transparent 42vh),
+        linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 28%);
+      z-index: 0;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      display: grid;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      padding: var(--pad-y) var(--pad-x);
+      transform: none;
+      transition: opacity 520ms ease, visibility 520ms ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+      z-index: 2;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: clamp(14px, 2vw, 34px);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, transparent 0 24.8%, rgba(255,255,255,.045) 25%, transparent 25.1% 49.8%, rgba(255,255,255,.045) 50%, transparent 50.1% 74.8%, rgba(255,255,255,.045) 75%, transparent 75.1%),
+        linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.006));
+      box-shadow: var(--shadow);
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: clamp(58px, 8vw, 132px) clamp(58px, 8vw, 132px);
+      mask-image: radial-gradient(circle at 50% 48%, black, transparent 73%);
+      opacity: .42;
+      z-index: -3;
+    }
+
+    .topline {
+      position: absolute;
+      top: clamp(22px, 4vh, 46px);
+      left: var(--pad-x);
+      right: var(--pad-x);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: clamp(10px, 1.1vw, 16px);
+      letter-spacing: 0;
+      z-index: 4;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .72em;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .mark {
+      width: clamp(26px, 2.4vw, 40px);
+      aspect-ratio: 1;
+      background: url("assets/pandaai-logo.png") center / contain no-repeat;
+      position: relative;
+      filter: brightness(1.9);
+      opacity: 1;
+    }
+
+    .mark::after {
+      content: "";
+      position: absolute;
+      inset: -38%;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,255,255,.13), transparent 58%);
+      z-index: -1;
+    }
+
+    .running {
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      padding: .55em 1.05em;
+      background: rgba(255,255,255,.035);
+      backdrop-filter: blur(10px);
+    }
+
+    h1, h2, h3, p, figure { margin: 0; }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: clamp(14px, 1.5vw, 22px);
+      font-weight: 700;
+      margin-bottom: clamp(10px, 1.8vh, 20px);
+    }
+
+    .kicker {
+      color: var(--muted);
+      font-size: clamp(13px, 1.45vw, 20px);
+      line-height: 1.48;
+    }
+
+    .mega {
+      font-family: "Avenir Next Condensed", "Avenir Next", "PingFang SC", sans-serif;
+      font-size: clamp(54px, 8.2vw, 128px);
+      line-height: .88;
+      letter-spacing: 0;
+      font-weight: 800;
+      text-wrap: balance;
+      text-shadow: 0 .08em .2em rgba(0,0,0,.55);
+    }
+
+    .mega span {
+      display: block;
+    }
+
+    .mega .tone {
+      color: var(--cyan);
+    }
+
+    .title {
+      font-size: clamp(34px, 5.2vw, 88px);
+      line-height: 1.02;
+      font-weight: 760;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: clamp(16px, 1.8vw, 28px);
+      line-height: 1.45;
+      max-width: min(68ch, 72vw);
+    }
+
+    .accent {
+      color: var(--cyan);
+    }
+
+    .violet {
+      color: var(--violet-soft);
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: clamp(16px, 1.5vw, 24px);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.092), rgba(255,255,255,.035)),
+        radial-gradient(circle at 50% 0%, rgba(123,53,255,.22), transparent 64%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.11), 0 2vh 6vh rgba(0,0,0,.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: clamp(12px, 1.25vw, 18px);
+      line-height: 1.55;
+    }
+
+    .label {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: .55em;
+      padding: .5em .78em;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color: var(--ink);
+      font-size: clamp(11px, 1vw, 15px);
+      font-weight: 700;
+    }
+
+    .dot {
+      width: .55em;
+      height: .55em;
+      border-radius: 999px;
+      background: var(--cyan);
+      box-shadow: 0 0 18px rgba(140,236,255,.7);
+    }
+
+    .slide.active .a {
+      animation: rise 560ms cubic-bezier(.18, .78, .18, 1) both;
+      animation-delay: var(--d, 0ms);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(3.5vh) scale(.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes clearReveal {
+      from { opacity: 0; transform: translateY(2vh) scale(.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translateY(0) scale(1); opacity: .9; }
+      50% { transform: translateY(-1.2vh) scale(1.035); opacity: 1; }
+    }
+
+    @keyframes orbit {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes scan {
+      0% { transform: translateX(-12%); opacity: .16; }
+      50% { opacity: .48; }
+      100% { transform: translateX(112%); opacity: .16; }
+    }
+
+    .hero {
+      grid-template-columns: minmax(0, .96fr) minmax(320px, .74fr);
+      grid-template-rows: minmax(0, 1fr) auto;
+      align-items: center;
+      column-gap: clamp(28px, 5vw, 78px);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      grid-column: 1;
+      grid-row: 1;
+      min-width: 0;
+      max-width: min(760px, 58vw);
+      padding-top: clamp(30px, 5vh, 80px);
+    }
+
+    .concept-visual {
+      grid-column: 2;
+      grid-row: 1;
+      position: relative;
+      justify-self: end;
+      min-width: 0;
+      width: min(100%, 560px);
+      aspect-ratio: 1.03;
+      border-radius: clamp(20px, 2.2vw, 34px);
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 100%),
+        linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 100%),
+        radial-gradient(circle at 62% 42%, rgba(140,236,255,.18), transparent 28%),
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.018));
+      background-size: 62px 62px, 62px 62px, auto, auto;
+      box-shadow: 0 4vh 9vh rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.14);
+      backdrop-filter: blur(16px);
+      z-index: 1;
+      overflow: hidden;
+      padding: clamp(22px, 2.3vw, 34px);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: clamp(16px, 2vh, 24px);
+    }
+
+    .concept-visual::before {
+      content: "";
+      position: absolute;
+      inset: 11%;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 22% 24%, rgba(123,53,255,.3), transparent 30%),
+        radial-gradient(circle at 72% 62%, rgba(140,236,255,.18), transparent 34%);
+      pointer-events: none;
+    }
+
+    .concept-visual::after {
+      content: "";
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 50%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(140,236,255,.45), rgba(168,255,228,.28), transparent);
+      pointer-events: none;
+    }
+
+    .system-title {
+      position: relative;
+      z-index: 1;
+      color: var(--cyan);
+      font-weight: 800;
+      font-size: clamp(14px, 1.3vw, 18px);
+    }
+
+    .system-map {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) clamp(54px, 6vw, 82px) minmax(130px, .72fr);
+      align-items: center;
+      gap: clamp(10px, 1.5vw, 18px);
+    }
+
+    .system-stack {
+      display: grid;
+      gap: clamp(10px, 1.3vh, 16px);
+    }
+
+    .system-lane,
+    .system-outcome {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.04)),
+        radial-gradient(circle at 0% 50%, rgba(140,236,255,.14), transparent 42%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.12);
+    }
+
+    .system-lane {
+      padding: clamp(12px, 1.25vw, 18px);
+      position: relative;
+    }
+
+    .system-lane::after {
+      content: "";
+      position: absolute;
+      right: calc(-1 * clamp(22px, 2.8vw, 36px));
+      top: 50%;
+      width: clamp(20px, 2.5vw, 32px);
+      height: 1px;
+      background: rgba(140,236,255,.4);
+    }
+
+    .system-lane span,
+    .system-outcome b {
+      display: block;
+      font-size: clamp(17px, 1.55vw, 23px);
+      line-height: 1.12;
+      font-weight: 820;
+    }
+
+    .system-lane small,
+    .system-outcome small {
+      display: block;
+      margin-top: .45em;
+      color: var(--muted);
+      font-size: clamp(10px, .9vw, 13px);
+      letter-spacing: 0;
+    }
+
+    .system-bridge {
+      position: relative;
+      min-height: clamp(190px, 26vh, 260px);
+      display: grid;
+      place-items: center;
+    }
+
+    .system-bridge::before {
+      content: "";
+      position: absolute;
+      top: 8%;
+      bottom: 8%;
+      left: 50%;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(140,236,255,.44), transparent);
+    }
+
+    .system-bridge span {
+      position: relative;
+      z-index: 1;
+      width: clamp(48px, 5vw, 70px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #101010;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan), var(--mint));
+      box-shadow: 0 0 42px rgba(140,236,255,.32);
+    }
+
+    .system-outcome {
+      min-height: clamp(180px, 25vh, 250px);
+      padding: clamp(18px, 1.8vw, 26px);
+      display: grid;
+      place-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(168,255,228,.22), transparent 38%),
+        linear-gradient(180deg, rgba(123,53,255,.34), rgba(255,255,255,.05));
+    }
+
+    .system-caption {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: clamp(10px, .95vw, 13px);
+    }
+
+    .hero-meta {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      gap: clamp(18px, 3vw, 56px);
+      align-items: end;
+      padding-bottom: clamp(76px, 9vh, 96px);
+      color: var(--muted);
+      font-size: clamp(12px, 1.35vw, 18px);
+      z-index: 2;
+    }
+
+    .contents {
+      align-items: center;
+    }
+
+    .contents-layout {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(260px, .62fr) minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 80px);
+      align-items: center;
+      padding-top: clamp(38px, 5.5vh, 78px);
+      padding-bottom: 72px;
+    }
+
+    .contents-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 2vw, 24px);
+    }
+
+    .toc-card {
+      min-height: clamp(150px, 22vh, 232px);
+      padding: clamp(18px, 2.2vw, 30px);
+      display: grid;
+      align-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toc-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--violet), transparent);
+      opacity: .72;
+    }
+
+    .toc-num {
+      color: var(--cyan);
+      font-size: clamp(28px, 4.3vw, 64px);
+      line-height: .9;
+      font-weight: 820;
+      opacity: .92;
+    }
+
+    .toc-card h3 {
+      font-size: clamp(18px, 2vw, 30px);
+      line-height: 1.16;
+      margin-top: clamp(18px, 3vh, 34px);
+    }
+
+    .section {
+      align-items: center;
+    }
+
+    .section-wrap {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(200px, .48fr) minmax(0, 1fr);
+      gap: clamp(26px, 5vw, 88px);
+      align-items: center;
+      padding-top: clamp(42px, 6vh, 84px);
+      padding-bottom: 72px;
+    }
+
+    .section-number {
+      font-family: "Avenir Next Condensed", "Avenir Next", "PingFang SC", sans-serif;
+      font-size: clamp(128px, 18vw, 270px);
+      line-height: .82;
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(140,236,255,.58);
+      text-shadow: 0 0 64px rgba(123,53,255,.32);
+    }
+
+    .section-copy {
+      position: relative;
+      z-index: 2;
+      max-width: min(900px, 72vw);
+    }
+
+    .section-title {
+      font-size: clamp(44px, 7.4vw, 116px);
+      line-height: .98;
+      font-weight: 820;
+      text-wrap: balance;
+      margin-bottom: clamp(16px, 2.4vh, 28px);
+    }
+
+    .slide[data-name="section-03"] .section-wrap {
+      grid-template-columns: minmax(210px, .34fr) minmax(0, 1fr);
+      align-items: start;
+      gap: clamp(48px, 6.5vw, 100px);
+      padding-top: clamp(112px, 15vh, 152px);
+      padding-bottom: 104px;
+    }
+
+    .slide[data-name="section-03"] .section-number {
+      align-self: start;
+      font-size: clamp(150px, 17vw, 246px);
+      line-height: .78;
+    }
+
+    .slide[data-name="section-03"] .section-copy {
+      max-width: 880px;
+      padding-top: clamp(4px, 1vh, 14px);
+    }
+
+    .slide[data-name="section-03"] .section-title {
+      font-size: clamp(50px, 6vw, 96px);
+      line-height: .96;
+      max-width: 830px;
+    }
+
+    .slide[data-name="section-03"] .pathway {
+      max-width: none;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(12px, 1.4vw, 18px);
+      margin-top: clamp(30px, 4vh, 46px);
+      position: relative;
+      z-index: 3;
+    }
+
+    .pathway {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(10px, 1.4vw, 18px);
+      margin-top: clamp(26px, 4vh, 44px);
+      max-width: 860px;
+    }
+
+    .path-step {
+      padding: clamp(12px, 1.4vw, 18px);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.055);
+      color: var(--muted);
+      font-size: clamp(12px, 1.2vw, 16px);
+    }
+
+    .path-step strong {
+      display: block;
+      color: var(--cyan);
+      font-size: clamp(16px, 1.7vw, 24px);
+      margin-bottom: .35em;
+    }
+
+    .workshop-layout {
+      display: grid;
+      grid-template-columns: minmax(320px, .72fr) minmax(0, 1fr);
+      gap: clamp(28px, 4.4vw, 64px);
+      align-items: center;
+      width: 100%;
+      padding-top: clamp(36px, 5vh, 64px);
+      padding-bottom: 88px;
+    }
+
+    .workshop-layout .title {
+      font-size: clamp(40px, 5.1vw, 72px);
+    }
+
+    .workshop-layout .subtitle {
+      font-size: clamp(14px, 1.55vw, 22px);
+      line-height: 1.38;
+    }
+
+    .workshop-card-list {
+      display: grid;
+      gap: clamp(8px, 1.1vh, 13px);
+      margin-top: clamp(14px, 2vh, 24px);
+    }
+
+    .workshop-info {
+      padding: clamp(12px, 1.35vw, 18px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.055);
+    }
+
+    .workshop-info h3 {
+      color: var(--cyan);
+      font-size: clamp(17px, 1.65vw, 24px);
+      margin-bottom: .32em;
+    }
+
+    .workshop-info p {
+      font-size: clamp(11px, 1.08vw, 15px);
+      line-height: 1.42;
+    }
+
+    .workshop-collage {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: clamp(12px, 1.5vw, 18px);
+      height: min(58vh, 520px);
+      min-height: 380px;
+    }
+
+    .workshop-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: clamp(18px, 1.8vw, 28px);
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 3vh 7vh rgba(0,0,0,.34);
+    }
+
+    .workshop-photo:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .workshop-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(.98) contrast(1.02) brightness(.96);
+    }
+
+    .workshop-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 62%, rgba(0,0,0,.18)),
+        radial-gradient(circle at 18% 14%, rgba(140,236,255,.08), transparent 32%);
+      pointer-events: none;
+    }
+
+    .photo-tag {
+      position: absolute;
+      left: clamp(12px, 1.3vw, 20px);
+      bottom: clamp(12px, 1.3vw, 20px);
+      z-index: 2;
+      padding: .48em .72em;
+      border-radius: 999px;
+      color: var(--ink);
+      background: rgba(18,18,18,.62);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      font-size: clamp(11px, 1vw, 15px);
+      font-weight: 700;
+    }
+
+    .service-model {
+      align-items: center;
+    }
+
+    .service-layout {
+      width: 100%;
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      gap: clamp(10px, 1.4vh, 18px);
+      padding-top: clamp(36px, 5vh, 64px);
+      padding-bottom: 96px;
+    }
+
+    .service-head {
+      max-width: 1260px;
+    }
+
+    .service-title {
+      font-size: clamp(30px, 3.05vw, 48px);
+      line-height: 1.04;
+      font-weight: 820;
+      margin-bottom: clamp(8px, 1.1vh, 12px);
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(10px, 1.4vw, 18px);
+    }
+
+    .pillar {
+      position: relative;
+      min-height: clamp(218px, 29vh, 292px);
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+        radial-gradient(circle at 50% 0%, rgba(123,53,255,.18), transparent 58%);
+      overflow: hidden;
+      padding: 0 clamp(16px, 1.6vw, 22px) clamp(14px, 1.5vw, 20px);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .pillar-head {
+      margin: 0 calc(-1 * clamp(16px, 1.6vw, 22px)) clamp(10px, 1.3vh, 14px);
+      padding: clamp(12px, 1.35vw, 16px) clamp(16px, 1.6vw, 22px);
+      display: flex;
+      align-items: baseline;
+      gap: .7em;
+      background: var(--tone, rgba(140,236,255,.55));
+      color: #101010;
+      font-weight: 820;
+    }
+
+    .pillar-head strong {
+      font-size: clamp(24px, 2.8vw, 42px);
+      line-height: .9;
+    }
+
+    .pillar-head span {
+      font-size: clamp(14px, 1.3vw, 18px);
+    }
+
+    .pillar ul {
+      list-style: none;
+      display: grid;
+      gap: .58em;
+      padding: 0;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(10px, 1vw, 14px);
+      line-height: 1.35;
+    }
+
+    .pillar li {
+      position: relative;
+      padding-left: 1.25em;
+    }
+
+    .pillar li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .55em;
+      width: .5em;
+      aspect-ratio: 1;
+      border-radius: 999px;
+      background: var(--tone, var(--cyan));
+    }
+
+    .pillar-note {
+      color: var(--dim);
+      font-size: clamp(9px, .84vw, 12px);
+      line-height: 1.35;
+      margin-top: clamp(8px, 1vh, 12px);
+    }
+
+    .flow-bar {
+      padding: clamp(12px, 1.3vw, 18px);
+      border-radius: 18px;
+      border: 1px solid rgba(140,236,255,.44);
+      color: var(--cyan);
+      text-align: center;
+      font-size: clamp(12px, 1.2vw, 18px);
+      background: rgba(140,236,255,.045);
+      box-shadow: inset 0 0 24px rgba(140,236,255,.045);
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(12px, 1.5vw, 18px);
+    }
+
+    .support-card {
+      min-height: clamp(108px, 14vh, 150px);
+      padding: clamp(14px, 1.45vw, 20px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.045);
+      border-left: 5px solid var(--tone, var(--cyan));
+      display: grid;
+      align-content: space-between;
+    }
+
+    .support-card h3 {
+      color: var(--tone, var(--cyan));
+      font-size: clamp(16px, 1.7vw, 24px);
+    }
+
+    .support-card p {
+      color: var(--muted);
+      font-size: clamp(10px, .96vw, 14px);
+      line-height: 1.45;
+    }
+
+    .service-foot {
+      color: var(--muted);
+      text-align: center;
+      font-size: clamp(11px, 1vw, 15px);
+      line-height: 1.35;
+    }
+
+    .page-layout {
+      width: 100%;
+      display: grid;
+      gap: clamp(18px, 3vh, 34px);
+      align-content: center;
+      padding-top: clamp(42px, 6vh, 76px);
+      padding-bottom: 92px;
+    }
+
+    .contents-layout,
+    .section-wrap,
+    .workshop-layout,
+    .service-layout,
+    .page-layout,
+    .plan-layout {
+      max-width: min(1320px, 100%);
+      margin-inline: auto;
+    }
+
+    .page-head {
+      display: grid;
+      gap: clamp(8px, 1.2vh, 14px);
+      max-width: min(980px, 78vw);
+    }
+
+    .page-title {
+      font-size: clamp(32px, 4.1vw, 66px);
+      line-height: 1.05;
+      font-weight: 820;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .page-kicker {
+      color: var(--muted);
+      font-size: clamp(13px, 1.35vw, 20px);
+      line-height: 1.48;
+      max-width: 78ch;
+    }
+
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(12px, 1.6vw, 22px);
+    }
+
+    .job-card {
+      min-height: clamp(260px, 42vh, 380px);
+      padding: clamp(18px, 2vw, 30px);
+      border-top: 5px solid var(--tone, var(--cyan));
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: clamp(14px, 2vh, 22px);
+    }
+
+    .job-card h3,
+    .story-card h3,
+    .cert-card h3,
+    .brand-card h3,
+    .mode-card h3 {
+      color: var(--tone, var(--cyan));
+      font-size: clamp(18px, 1.8vw, 27px);
+      line-height: 1.15;
+    }
+
+    .tag-list {
+      display: grid;
+      gap: .65em;
+      color: var(--muted);
+      font-size: clamp(12px, 1.05vw, 15px);
+      line-height: 1.3;
+    }
+
+    .tag-list span {
+      padding: .55em .72em;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.045);
+    }
+
+    .bottom-callout {
+      padding: clamp(12px, 1.3vw, 18px) clamp(16px, 1.7vw, 24px);
+      border-radius: 18px;
+      border: 1px solid rgba(140,236,255,.34);
+      background: rgba(140,236,255,.045);
+      color: var(--cyan);
+      font-size: clamp(13px, 1.18vw, 18px);
+      line-height: 1.35;
+    }
+
+    .photo-story {
+      display: grid;
+      grid-template-columns: minmax(360px, .92fr) minmax(0, 1.08fr);
+      gap: clamp(24px, 4vw, 66px);
+      align-items: center;
+    }
+
+    .story-list {
+      display: grid;
+      gap: clamp(12px, 1.6vh, 18px);
+    }
+
+    .story-card {
+      padding: clamp(14px, 1.55vw, 22px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.052);
+    }
+
+    .story-card p {
+      margin-top: .55em;
+      color: var(--muted);
+      font-size: clamp(11px, 1.02vw, 15px);
+      line-height: 1.45;
+    }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: clamp(18px, 2vw, 30px);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 3.6vh 8vh rgba(0,0,0,.34);
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: none;
+    }
+
+    .image-frame.contain img {
+      object-fit: contain;
+      background: #111;
+    }
+
+    .image-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.08));
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: clamp(9px, 1.1vw, 14px);
+    }
+
+    .course-card {
+      min-height: clamp(332px, 48vh, 430px);
+      padding: clamp(12px, 1.25vw, 18px);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.076), rgba(255,255,255,.035)),
+        radial-gradient(circle at 50% 0%, rgba(123,53,255,.16), transparent 56%);
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: clamp(8px, 1vh, 12px);
+    }
+
+    .course-card .num {
+      color: var(--cyan);
+      font-size: clamp(12px, 1vw, 15px);
+      font-weight: 800;
+    }
+
+    .course-card h3 {
+      color: var(--ink);
+      font-size: clamp(15px, 1.35vw, 20px);
+      line-height: 1.18;
+    }
+
+    .course-card p {
+      color: var(--muted);
+      font-size: clamp(9.5px, .86vw, 12.5px);
+      line-height: 1.42;
+    }
+
+    .course-card .audience {
+      color: var(--cyan);
+      font-size: clamp(9px, .78vw, 11px);
+      line-height: 1.32;
+    }
+
+    .practice-layout,
+    .winner-layout,
+    .media-layout,
+    .lab-layout {
+      display: grid;
+      grid-template-columns: minmax(320px, .72fr) minmax(0, 1.28fr);
+      gap: clamp(24px, 4vw, 64px);
+      align-items: center;
+    }
+
+    .proof-collage {
+      display: grid;
+      grid-template-columns: 1fr .62fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: clamp(10px, 1.3vw, 16px);
+      height: min(60vh, 540px);
+    }
+
+    .proof-collage .image-frame:first-child {
+      grid-row: 1 / 2;
+    }
+
+    .proof-collage .image-frame:nth-child(2) {
+      grid-row: 1 / 3;
+    }
+
+    .contest-layout {
+      display: grid;
+      grid-template-columns: minmax(330px, .8fr) minmax(0, 1.2fr);
+      gap: clamp(24px, 4vw, 62px);
+      align-items: center;
+    }
+
+    .stat-card {
+      padding: clamp(16px, 1.6vw, 24px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.052);
+      margin-top: clamp(16px, 2vh, 26px);
+    }
+
+    .stat-number {
+      color: var(--cyan);
+      font-size: clamp(36px, 5vw, 76px);
+      font-weight: 850;
+      line-height: .96;
+      margin-bottom: .2em;
+    }
+
+    .contest-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(10px, 1.2vw, 16px);
+      margin-top: clamp(14px, 2vh, 24px);
+    }
+
+    .mini-point {
+      padding: clamp(12px, 1.25vw, 18px);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.045);
+    }
+
+    .mini-point h3 {
+      color: var(--cyan);
+      font-size: clamp(15px, 1.35vw, 20px);
+      margin-bottom: .45em;
+    }
+
+    .mini-point p {
+      color: var(--muted);
+      font-size: clamp(10px, .9vw, 13px);
+      line-height: 1.4;
+    }
+
+    .phone-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 1.8vw, 24px);
+      height: min(66vh, 610px);
+    }
+
+    .phone-pair .image-frame {
+      border-radius: 26px;
+    }
+
+    .cert-grid,
+    .mode-grid,
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(12px, 1.5vw, 20px);
+    }
+
+    .cert-card,
+    .mode-card,
+    .brand-card {
+      min-height: clamp(220px, 34vh, 320px);
+      padding: clamp(16px, 1.7vw, 24px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.074), rgba(255,255,255,.033)),
+        radial-gradient(circle at 50% 0%, rgba(140,236,255,.12), transparent 56%);
+      display: grid;
+      align-content: start;
+      gap: clamp(12px, 1.6vh, 18px);
+    }
+
+    .cert-num {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(140,236,255,.62);
+      font-size: clamp(42px, 5vw, 80px);
+      line-height: .85;
+      font-weight: 900;
+    }
+
+    .cert-card p,
+    .mode-card p,
+    .brand-card p {
+      color: var(--muted);
+      font-size: clamp(11px, .98vw, 14px);
+      line-height: 1.45;
+    }
+
+    .mode-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mode-card {
+      min-height: clamp(168px, 24vh, 232px);
+    }
+
+    .brand-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brand-card {
+      min-height: clamp(172px, 23vh, 230px);
+    }
+
+    .media-shots,
+    .lab-shots {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(12px, 1.4vw, 18px);
+      height: min(60vh, 540px);
+    }
+
+    .media-shots .image-frame {
+      background: #050707;
+    }
+
+    .media-shots .image-frame.contain img {
+      transform: scale(1.18);
+      transform-origin: 50% 50%;
+    }
+
+    .lab-shots {
+      grid-template-columns: 1.12fr .88fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+
+    .lab-shots .image-frame:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .plan-layout {
+      width: 100%;
+      display: grid;
+      gap: clamp(14px, 2vh, 24px);
+      align-content: center;
+      padding-top: clamp(42px, 6vh, 74px);
+      padding-bottom: 92px;
+    }
+
+    .plan-table {
+      display: grid;
+      gap: clamp(10px, 1.2vh, 14px);
+    }
+
+    .plan-row {
+      display: grid;
+      grid-template-columns: 1.1fr .82fr 1.45fr .54fr;
+      gap: clamp(8px, 1vw, 14px);
+      align-items: stretch;
+    }
+
+    .plan-cell {
+      padding: clamp(10px, 1vw, 15px);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.11);
+      background: rgba(255,255,255,.045);
+      color: var(--muted);
+      font-size: clamp(10px, .9vw, 13px);
+      line-height: 1.36;
+    }
+
+    .plan-row.head .plan-cell {
+      color: #101010;
+      background: var(--tone, var(--cyan));
+      font-weight: 820;
+      border-color: transparent;
+    }
+
+    .plan-cell strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: .35em;
+      font-size: clamp(12px, 1.02vw, 15px);
+      line-height: 1.2;
+    }
+
+    .plan-total {
+      padding: clamp(13px, 1.3vw, 18px) clamp(18px, 1.8vw, 26px);
+      border-radius: 18px;
+      border: 1px solid rgba(140,236,255,.38);
+      background: rgba(140,236,255,.055);
+      color: var(--cyan);
+      font-size: clamp(14px, 1.3vw, 20px);
+      font-weight: 820;
+    }
+
+    .compare-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: clamp(22px, 4vw, 60px);
+      align-items: center;
+    }
+
+    .compare-stack {
+      display: grid;
+      gap: clamp(12px, 1.5vh, 18px);
+    }
+
+    .compare-card {
+      padding: clamp(16px, 1.7vw, 24px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.052);
+    }
+
+    .compare-card h3 {
+      color: var(--cyan);
+      font-size: clamp(18px, 1.7vw, 25px);
+      margin-bottom: .55em;
+    }
+
+    .compare-card p {
+      color: var(--muted);
+      font-size: clamp(11px, 1vw, 15px);
+      line-height: 1.45;
+    }
+
+    .flow-chain {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(8px, 1vw, 12px);
+      margin-top: clamp(18px, 2.6vh, 32px);
+    }
+
+    .flow-chain span {
+      display: grid;
+      place-items: center;
+      min-height: clamp(70px, 10vh, 96px);
+      border-radius: 18px;
+      border: 1px solid rgba(140,236,255,.3);
+      background: rgba(140,236,255,.045);
+      color: var(--cyan);
+      font-size: clamp(13px, 1.2vw, 18px);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .thanks-slide {
+      place-items: center;
+      text-align: center;
+    }
+
+    .thanks-title {
+      font-size: clamp(62px, 10vw, 150px);
+      line-height: .92;
+      font-weight: 860;
+      letter-spacing: 0;
+    }
+
+    .thanks-sub {
+      margin-top: clamp(18px, 3vh, 34px);
+      color: var(--muted);
+      font-size: clamp(16px, 1.6vw, 24px);
+    }
+
+    .problem {
+      grid-template-rows: minmax(0, 1fr);
+      align-items: center;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+      gap: clamp(28px, 5vw, 82px);
+      align-items: center;
+      width: 100%;
+      max-height: 78vh;
+      padding-top: clamp(30px, 4vh, 56px);
+    }
+
+    .problem-list {
+      display: grid;
+      gap: clamp(14px, 2.2vh, 26px);
+    }
+
+    .problem-card {
+      min-height: clamp(104px, 16vh, 158px);
+      padding: clamp(16px, 2.2vw, 28px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12%;
+      bottom: 12%;
+      width: 4px;
+      border-radius: 99px;
+      background: var(--cyan);
+      box-shadow: 0 0 22px rgba(140,236,255,.55);
+    }
+
+    .problem-card h3 {
+      color: var(--cyan);
+      font-size: clamp(18px, 2.1vw, 30px);
+      margin-bottom: .55em;
+    }
+
+    .gap-device {
+      position: relative;
+      min-height: min(58vh, 560px);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 50% 18%, rgba(123,53,255,.42), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.022));
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .gap-device::before {
+      content: "";
+      position: absolute;
+      inset: 15% 12%;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.13);
+      background: radial-gradient(circle, rgba(0,0,0,.04), rgba(0,0,0,.42));
+    }
+
+    .device-label {
+      position: absolute;
+      padding: .72em .9em;
+      border-radius: 999px;
+      background: rgba(255,255,255,.075);
+      border: 1px solid rgba(255,255,255,.15);
+      font-size: clamp(11px, 1.05vw, 15px);
+      color: var(--muted);
+    }
+
+    .device-label.left { left: 8%; top: 22%; }
+    .device-label.right { right: 8%; bottom: 22%; }
+    .device-label.center {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--ink);
+      background: rgba(123,53,255,.42);
+      box-shadow: 0 0 46px rgba(123,53,255,.4);
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: clamp(28px, 5vw, 82px);
+      align-items: center;
+      width: 100%;
+      padding-top: clamp(32px, 5vh, 72px);
+      padding-bottom: 72px;
+    }
+
+    .platform-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(14px, 2vw, 28px);
+      align-items: stretch;
+    }
+
+    .platform-card {
+      min-height: clamp(190px, 28vh, 286px);
+      padding: clamp(18px, 2.5vw, 34px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .platform-card h3 {
+      color: var(--cyan);
+      font-size: clamp(20px, 2.4vw, 34px);
+      margin-bottom: .8em;
+    }
+
+    .platform-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--violet), var(--cyan), transparent);
+      opacity: .75;
+    }
+
+    .loop-model {
+      display: grid;
+      place-items: center;
+      padding-top: clamp(28px, 5vh, 66px);
+    }
+
+    .loop-wrap {
+      position: relative;
+      width: min(77vw, 1120px);
+      aspect-ratio: 1.75;
+      display: grid;
+      place-items: center;
+    }
+
+    .slide.active.loop-model .a {
+      animation: clearReveal 420ms cubic-bezier(.18, .78, .18, 1) both;
+      animation-delay: var(--d, 0ms);
+    }
+
+    .loop-ring {
+      position: absolute;
+      inset: 7%;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.16);
+      animation: orbit 26s linear infinite;
+    }
+
+    .loop-ring::before,
+    .loop-ring::after {
+      content: "";
+      position: absolute;
+      width: clamp(10px, 1.2vw, 18px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 28px rgba(140,236,255,.75);
+    }
+
+    .loop-ring::before { left: 9%; top: 18%; }
+    .loop-ring::after { right: 12%; bottom: 16%; background: var(--violet-soft); }
+
+    .hex-core {
+      width: clamp(220px, 25vw, 420px);
+      aspect-ratio: 1.05;
+      clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+      background:
+        radial-gradient(circle at 50% 44%, rgba(255,255,255,.32), transparent 18%),
+        linear-gradient(145deg, rgba(168,255,228,.22), rgba(123,53,255,.92) 62%, rgba(17,17,17,.92));
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: clamp(23px, 3vw, 46px);
+      font-weight: 800;
+      line-height: 1.08;
+      box-shadow: 0 0 72px rgba(123,53,255,.5);
+    }
+
+    .node {
+      position: absolute;
+      width: clamp(156px, 17vw, 264px);
+      min-height: clamp(110px, 16vh, 150px);
+      padding: clamp(14px, 1.6vw, 24px);
+    }
+
+    .node h3 {
+      color: var(--cyan);
+      font-size: clamp(17px, 1.8vw, 28px);
+      margin-bottom: .5em;
+    }
+
+    .node:nth-of-type(1) { left: 0; top: 5%; }
+    .node:nth-of-type(2) { right: 0; top: 5%; }
+    .node:nth-of-type(3) { right: 0; bottom: 5%; }
+    .node:nth-of-type(4) { left: 0; bottom: 5%; }
+
+    .evidence {
+      grid-template-rows: auto 1fr;
+      gap: clamp(18px, 4vh, 42px);
+      align-content: center;
+    }
+
+    .evidence-head {
+      max-width: 75vw;
+      padding-top: clamp(40px, 6vh, 78px);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr .95fr .95fr;
+      gap: clamp(14px, 2vw, 28px);
+      align-items: stretch;
+    }
+
+    .metric-card {
+      min-height: clamp(240px, 39vh, 380px);
+      padding: clamp(18px, 2.3vw, 34px);
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      align-content: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card.big {
+      background:
+        radial-gradient(circle at 55% 0%, rgba(123,53,255,.46), transparent 54%),
+        linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.04));
+    }
+
+    .metric {
+      font-size: clamp(38px, 6vw, 92px);
+      line-height: .92;
+      font-weight: 830;
+      color: var(--cyan);
+      margin-bottom: clamp(14px, 2vh, 24px);
+      text-shadow: 0 0 32px rgba(140,236,255,.24);
+    }
+
+    .metric-card h3 {
+      font-size: clamp(18px, 2vw, 30px);
+      margin-bottom: .75em;
+    }
+
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: clamp(12px, 2vh, 22px);
+      transform: translateX(-50%) scale(.84);
+      transform-origin: bottom center;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      z-index: 20;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      background: rgba(18,18,18,.58);
+      backdrop-filter: blur(12px);
+      padding: 6px;
+      box-shadow: 0 18px 42px rgba(0,0,0,.34);
+      opacity: .46;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .controls:hover,
+    .controls:focus-within {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: var(--ink);
+      padding: 8px 11px;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    button:hover { background: rgba(255,255,255,.15); }
+    button.on { background: var(--violet); }
+
+    .counter {
+      min-width: 52px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .progress {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100vw;
+      z-index: 21;
+      background: rgba(255,255,255,.08);
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(90deg, var(--violet), var(--cyan));
+      transition: width 360ms ease;
+    }
+
+    @media (max-height: 700px) {
+      :root {
+        --pad-y: clamp(18px, 3.2vh, 38px);
+      }
+      .platform-card { min-height: 170px; }
+      .metric-card { min-height: 210px; }
+      .problem-card { min-height: 92px; }
+    }
+
+    @media (max-height: 600px) {
+      .running { display: none; }
+      .controls { transform: translateX(-50%) scale(.9); transform-origin: bottom center; }
+      .subtitle, .kicker, .small { line-height: 1.35; }
+      .metrics { gap: 12px; }
+    }
+
+    @media (max-width: 760px) {
+      .slide {
+        padding-bottom: calc(var(--pad-y) + 76px);
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        align-content: center;
+        gap: 16px;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+        padding-top: 66px;
+      }
+
+      .mega {
+        font-size: clamp(40px, 11.4vw, 46px);
+        line-height: .98;
+      }
+
+      .concept-visual {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        max-width: none;
+        transform: none;
+        animation: none;
+        aspect-ratio: 1.68;
+        max-height: min(27vh, 230px);
+        padding: 12px;
+        gap: 8px;
+      }
+
+      .system-title {
+        font-size: 11px;
+      }
+
+      .system-map {
+        grid-template-columns: minmax(0, 1fr) 34px minmax(82px, .7fr);
+        gap: 7px;
+      }
+
+      .system-stack {
+        gap: 5px;
+      }
+
+      .system-lane {
+        padding: 7px 8px;
+        border-radius: 12px;
+      }
+
+      .system-lane::after {
+        right: -12px;
+        width: 11px;
+      }
+
+      .system-lane span,
+      .system-outcome b {
+        font-size: 12px;
+      }
+
+      .system-lane small,
+      .system-outcome small,
+      .system-caption {
+        display: none;
+      }
+
+      .system-bridge {
+        min-height: 92px;
+      }
+
+      .system-bridge span {
+        width: 30px;
+        font-size: 11px;
+      }
+
+      .system-outcome {
+        min-height: 92px;
+        padding: 9px;
+        border-radius: 14px;
+      }
+
+      .hero-meta {
+        grid-column: 1;
+        grid-row: 3;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        align-self: end;
+        padding-bottom: 84px;
+        font-size: 11px;
+      }
+
+      .contents-layout,
+      .section-wrap,
+      .workshop-layout,
+      .service-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding-top: 66px;
+        padding-bottom: 86px;
+      }
+
+      .contents-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .toc-card {
+        min-height: auto;
+        padding: 14px;
+      }
+
+      .toc-card h3 {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      .toc-num {
+        font-size: 32px;
+      }
+
+      .section-number {
+        font-size: clamp(82px, 24vw, 108px);
+      }
+
+      .section-title {
+        font-size: clamp(36px, 12vw, 52px);
+      }
+
+      .slide[data-name="section-03"] .section-wrap {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-top: 66px;
+        padding-bottom: 88px;
+      }
+
+      .slide[data-name="section-03"] .section-number {
+        font-size: clamp(78px, 22vw, 96px);
+      }
+
+      .slide[data-name="section-03"] .section-copy {
+        padding-top: 0;
+      }
+
+      .slide[data-name="section-03"] .section-title {
+        font-size: clamp(32px, 10.5vw, 44px);
+      }
+
+      .pathway {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .path-step {
+        padding: 10px;
+        font-size: 10px;
+      }
+
+      .path-step strong {
+        font-size: 14px;
+      }
+
+      .workshop-card-list {
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .workshop-info {
+        padding: 12px;
+      }
+
+      .workshop-info h3 {
+        font-size: 15px;
+      }
+
+      .workshop-collage {
+        min-height: 0;
+        height: min(30vh, 240px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+        gap: 8px;
+      }
+
+      .workshop-photo:first-child {
+        grid-row: auto;
+      }
+
+      .photo-tag {
+        font-size: 9px;
+        left: 8px;
+        bottom: 8px;
+      }
+
+      .service-layout {
+        gap: 8px;
+      }
+
+      .service-title {
+        font-size: clamp(24px, 7.5vw, 32px);
+      }
+
+      .pillar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .pillar {
+        min-height: auto;
+        padding: 0 10px 10px;
+        border-radius: 16px;
+      }
+
+      .pillar-head {
+        margin: 0 -10px 8px;
+        padding: 8px 10px;
+      }
+
+      .pillar-head strong {
+        font-size: 20px;
+      }
+
+      .pillar-head span {
+        font-size: 11px;
+      }
+
+      .pillar ul {
+        gap: .38em;
+        font-size: 8.5px;
+        line-height: 1.18;
+      }
+
+      .pillar-note {
+        display: none;
+      }
+
+      .flow-bar {
+        padding: 8px;
+        font-size: 9px;
+        border-radius: 12px;
+      }
+
+      .support-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .support-card {
+        min-height: auto;
+        padding: 9px;
+        border-radius: 14px;
+        border-left-width: 3px;
+      }
+
+      .support-card h3 {
+        font-size: 11px;
+      }
+
+      .support-card p {
+        font-size: 8px;
+        line-height: 1.25;
+      }
+
+      .service-foot {
+        font-size: 8.5px;
+      }
+
+      .split,
+      .platform-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(16px, 2.2vh, 28px);
+        padding-top: 56px;
+      }
+      .gap-device { display: none; }
+      .platform-cards,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+      .platform-card,
+      .metric-card,
+      .problem-card {
+        min-height: auto;
+      }
+      .evidence {
+        gap: 12px;
+        align-content: start;
+      }
+      .evidence-head {
+        max-width: 100%;
+        padding-top: 52px;
+      }
+      .evidence .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .evidence .metric-card {
+        padding: 12px;
+      }
+      .evidence .metric {
+        font-size: clamp(28px, 10vw, 40px);
+        margin-bottom: 8px;
+      }
+      .evidence .metric-card h3 {
+        font-size: 13px;
+        margin-bottom: .35em;
+      }
+      .evidence .metric-card .small {
+        font-size: 10px;
+        line-height: 1.22;
+      }
+      .page-layout,
+      .plan-layout {
+        gap: 12px;
+        padding-top: 62px;
+        padding-bottom: 86px;
+      }
+      .page-head {
+        max-width: 100%;
+        gap: 6px;
+      }
+      .page-title {
+        font-size: clamp(24px, 7.5vw, 34px);
+        line-height: 1.08;
+      }
+      .page-kicker {
+        font-size: 11px;
+        line-height: 1.35;
+      }
+      .job-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+      .job-card {
+        min-height: auto;
+        padding: 10px;
+        gap: 8px;
+        border-top-width: 3px;
+      }
+      .job-card h3,
+      .story-card h3,
+      .cert-card h3,
+      .brand-card h3,
+      .mode-card h3 {
+        font-size: 13px;
+      }
+      .tag-list {
+        gap: 5px;
+        font-size: 9px;
+      }
+      .tag-list span {
+        padding: 5px 6px;
+        border-radius: 9px;
+      }
+      .bottom-callout {
+        padding: 9px 10px;
+        font-size: 11px;
+        border-radius: 12px;
+      }
+      .photo-story,
+      .practice-layout,
+      .winner-layout,
+      .media-layout,
+      .lab-layout,
+      .contest-layout,
+      .compare-layout {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .story-list {
+        gap: 8px;
+      }
+      .story-card {
+        padding: 10px;
+        border-radius: 14px;
+      }
+      .story-card p,
+      .cert-card p,
+      .mode-card p,
+      .brand-card p,
+      .compare-card p,
+      .mini-point p {
+        font-size: 9px;
+        line-height: 1.28;
+      }
+      .image-frame {
+        border-radius: 16px;
+      }
+      .photo-story > .image-frame,
+      .contest-layout > .image-frame {
+        height: min(24vh, 190px) !important;
+      }
+      .course-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+      .course-card {
+        min-height: auto;
+        grid-template-columns: 48px minmax(0, .92fr) minmax(90px, .7fr);
+        grid-template-rows: auto;
+        align-items: start;
+        padding: 8px;
+        gap: 8px;
+        border-radius: 12px;
+      }
+      .course-card .num {
+        font-size: 10px;
+      }
+      .course-card h3 {
+        font-size: 12px;
+      }
+      .course-card p {
+        font-size: 8px;
+        line-height: 1.2;
+      }
+      .course-card .audience {
+        font-size: 7.5px;
+        line-height: 1.18;
+      }
+      .proof-collage {
+        height: min(30vh, 240px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+        gap: 8px;
+      }
+      .proof-collage .image-frame:first-child,
+      .proof-collage .image-frame:nth-child(2) {
+        grid-row: auto;
+      }
+      .stat-card {
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 14px;
+      }
+      .stat-number {
+        font-size: 32px;
+      }
+      .contest-points {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+        margin-top: 8px;
+      }
+      .mini-point {
+        padding: 8px;
+        border-radius: 12px;
+      }
+      .mini-point h3 {
+        font-size: 11px;
+      }
+      .phone-pair,
+      .media-shots {
+        height: min(34vh, 280px);
+        gap: 8px;
+      }
+      .media-shots {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .lab-shots {
+        height: min(34vh, 280px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+        gap: 8px;
+      }
+      .lab-shots .image-frame:first-child {
+        grid-row: auto;
+      }
+      .cert-grid,
+      .mode-grid,
+      .brand-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+      .cert-card,
+      .mode-card,
+      .brand-card {
+        min-height: auto;
+        padding: 10px;
+        border-radius: 14px;
+        gap: 7px;
+      }
+      .cert-num {
+        font-size: 34px;
+      }
+      .plan-table {
+        gap: 6px;
+      }
+      .plan-row {
+        grid-template-columns: .92fr .78fr 1fr .54fr;
+        gap: 5px;
+      }
+      .plan-cell {
+        padding: 6px;
+        border-radius: 9px;
+        font-size: 7.2px;
+        line-height: 1.18;
+      }
+      .plan-cell strong {
+        font-size: 8px;
+      }
+      .plan-total {
+        padding: 9px 10px;
+        font-size: 11px;
+        border-radius: 12px;
+      }
+      .compare-stack {
+        gap: 8px;
+      }
+      .compare-card {
+        padding: 10px;
+        border-radius: 14px;
+      }
+      .compare-card h3 {
+        font-size: 13px;
+      }
+      .flow-chain {
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .flow-chain span {
+        min-height: 54px;
+        border-radius: 12px;
+        font-size: 10px;
+      }
+      .thanks-title {
+        font-size: clamp(46px, 15vw, 64px);
+      }
+      .thanks-sub {
+        font-size: 13px;
+      }
+      .node {
+        position: relative;
+        width: auto;
+        min-height: auto;
+      }
+      .loop-wrap {
+        width: 88vw;
+        aspect-ratio: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .loop-ring, .hex-core { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" id="deck" aria-live="polite">
+    <section class="slide hero active" data-slide="0" data-name="cover">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">AI Quant Education Deck / HTML Retest</div>
+      </div>
+      <div class="hero-copy">
+        <div class="eyebrow a">面向高校的 AI 量化实践教学与能力认证体系建设方案</div>
+        <h1 class="mega a" style="--d:110ms"><span class="tone">AI量化</span><span>人才培养</span><span>科教方案</span></h1>
+        <p class="subtitle a" style="--d:230ms">以平台实训连接课程教学、赛事实践与能力评价。</p>
+      </div>
+      <div class="concept-visual a" style="--d:180ms" aria-label="平台实训连接课程教学、赛事实践与能力评价">
+        <div class="system-title">平台实训连接教学、赛事与评价</div>
+        <div class="system-map">
+          <div class="system-stack">
+            <div class="system-lane"><span>课程教学</span><small>Course Design</small></div>
+            <div class="system-lane"><span>平台实训</span><small>Quant Training</small></div>
+            <div class="system-lane"><span>赛事实践</span><small>Factor Contest</small></div>
+          </div>
+          <div class="system-bridge"><span>AI</span></div>
+          <div class="system-outcome"><b>能力<br>评价</b><small>认证 / 作品 / 成长记录</small></div>
+        </div>
+        <div class="system-caption">
+          <span>输入：课程与实训过程</span>
+          <span>输出：可验证能力成果</span>
+        </div>
+      </div>
+      <div class="hero-meta a" style="--d:340ms">
+        <span>PandaAI ｜ 2026</span>
+        <span class="label"><span class="dot"></span>Platform Training</span>
+        <span>Course / Contest / Certification</span>
+      </div>
+    </section>
+
+    <section class="slide contents" data-slide="1" data-name="contents">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">CONTENTS</div>
+      </div>
+      <div class="contents-layout">
+        <div>
+          <div class="eyebrow a">目录</div>
+          <h2 class="title a" style="--d:90ms">从教学现状，<br><span class="accent">到培养闭环</span></h2>
+          <p class="subtitle a" style="--d:180ms">前 10 页先建立问题、平台、闭环与合作方向四个叙事入口。</p>
+        </div>
+        <div class="contents-grid">
+          <article class="toc-card panel a" style="--d:140ms">
+            <div class="toc-num">01</div>
+            <h3>目前高校量化金融教学现状</h3>
+          </article>
+          <article class="toc-card panel a" style="--d:220ms">
+            <div class="toc-num">02</div>
+            <h3>PandaAI 面向高校的 AI量化实践</h3>
+          </article>
+          <article class="toc-card panel a" style="--d:300ms">
+            <div class="toc-num">03</div>
+            <h3>如何用“岗-课-赛-证”打通培养闭环</h3>
+          </article>
+          <article class="toc-card panel a" style="--d:380ms">
+            <div class="toc-num">04</div>
+            <h3>合作模式：高校 × PandaAI</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="2" data-name="section-01">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">01 / Teaching Status</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">01</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">目前高校量化金融教学的现状</div>
+          <h2 class="section-title a" style="--d:210ms">高校需要的不只是一门课程</h2>
+          <p class="subtitle a" style="--d:310ms">而是一套连接教学、实训、竞赛与能力评价的 AI 量化实践教学体系。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide problem" data-slide="3" data-name="gap">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">01 / From Theory to Practice</div>
+      </div>
+      <div class="split">
+        <div>
+          <div class="eyebrow a">教学现状</div>
+          <h2 class="title a" style="--d:90ms">高校量化金融教学，正在面临<br><span class="accent">“从理论到实践”</span>的断层</h2>
+          <p class="subtitle a" style="--d:190ms">高校需要的不只是一门课程，而是一套连接教学、实训、竞赛与能力评价的 AI 量化实践教学体系。</p>
+        </div>
+        <div class="problem-list">
+          <article class="problem-card panel a" style="--d:170ms">
+            <h3>理论与实践断层</h3>
+            <p class="small">学生可以学习金融市场、统计建模、机器学习等知识，但缺少真实量化研究场景中的实践训练。</p>
+          </article>
+          <article class="problem-card panel a" style="--d:260ms">
+            <h3>工具与流程缺失</h3>
+            <p class="small">现有教学多停留在代码练习、案例复现或单点实验，难以完整覆盖数据调用、因子构建、回测验证、指标评估与策略优化流程。</p>
+          </article>
+          <article class="problem-card panel a" style="--d:350ms">
+            <h3>成果与评价不足</h3>
+            <p class="small">课程结束后，学生缺少可量化、可展示、可沉淀的实践成果，学校也难以形成持续性的学生作品集与能力评价体系。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="4" data-name="section-02">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">02 / Platform Practice</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">02</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">PandaAI 面向高校的 AI 量化实践</div>
+          <h2 class="section-title a" style="--d:210ms">把课程内容，转成可操作的实训任务</h2>
+          <p class="subtitle a" style="--d:310ms">通过平台实训，让金融工程、量化投资、数据分析与机器学习课程进入真实研究流程。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="5" data-name="platform">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">02 / Platform Training</div>
+      </div>
+      <div class="workshop-layout">
+        <div>
+          <div class="eyebrow">PandaAI：面向高校的 AI 量化实践</div>
+          <h2 class="title">从知识讲授，<br><span class="accent">到平台实训</span></h2>
+          <p class="kicker">PandaAI 不是单一的软件工具，而是一套面向 AI 量化教学场景的实践平台。高校可以将课程内容转化为学生可操作、可验证、可展示的实践任务。</p>
+          <div class="workshop-card-list">
+            <article class="workshop-info a" style="--d:160ms">
+              <h3>教学工具</h3>
+              <p class="small">支撑教师开展因子研究、策略回测、AI 工作流等量化实践教学。</p>
+            </article>
+            <article class="workshop-info a" style="--d:240ms">
+              <h3>实训环境</h3>
+              <p class="small">为学生提供数据调用、因子构建、回测验证、指标分析与策略优化的完整训练流程。</p>
+            </article>
+            <article class="workshop-info a" style="--d:320ms">
+              <h3>成果载体-因子大赛</h3>
+              <p class="small">沉淀学生项目作品、赛事成绩、研究报告与能力成长记录。</p>
+            </article>
+          </div>
+        </div>
+        <div class="workshop-collage a" style="--d:220ms" aria-label="PandaAI 高校量化 Workshop 现场照片">
+          <figure class="workshop-photo">
+            <img src="assets/workshop-zheda.png" alt="浙大量化 Workshop 现场">
+            <figcaption class="photo-tag">浙大量化 Workshop</figcaption>
+          </figure>
+          <figure class="workshop-photo">
+            <img src="assets/workshop-shangjiao.png" alt="上交量化 Workshop 现场">
+            <figcaption class="photo-tag">上交量化 Workshop</figcaption>
+          </figure>
+          <figure class="workshop-photo">
+            <img src="assets/workshop-fudan.png" alt="复旦量化 Workshop 现场">
+            <figcaption class="photo-tag">复旦量化 Workshop</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="6" data-name="section-03">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">03 / Integrated Loop</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">03</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">“岗-课-赛-证”一体化</div>
+          <h2 class="section-title a" style="--d:210ms">PandaAI量化人才培养闭环</h2>
+          <p class="subtitle a" style="--d:310ms">岗定方向，课训能力，赛验成果，证沉淀标准。</p>
+          <div class="pathway a" style="--d:410ms">
+            <div class="path-step"><strong>岗</strong>能力模型</div>
+            <div class="path-step"><strong>课</strong>平台实训</div>
+            <div class="path-step"><strong>赛</strong>成果验证</div>
+            <div class="path-step"><strong>证</strong>能力档案</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide loop-model" data-slide="7" data-name="loop">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">03 / Job-Course-Contest-Certification</div>
+      </div>
+      <div class="loop-wrap">
+        <article class="node panel a" style="--d:130ms">
+          <h3>岗：能力模型</h3>
+          <p class="small">围绕 AI量化研究、因子构建、策略回测、数据分析、AI工具协作等真实产业能力，明确高校人才培养方向。</p>
+        </article>
+        <article class="node panel a" style="--d:220ms">
+          <h3>课：平台实训</h3>
+          <p class="small">基于 PandaAI 平台，将课程知识转化为可操作的实训任务，让学生完成从理论学习到平台实践的能力训练。</p>
+        </article>
+        <article class="node panel a" style="--d:310ms">
+          <h3>赛：成果验证</h3>
+          <p class="small">以校内赛、校际赛、PandaAI 因子大赛等形式，让学生在真实数据和统一规则下完成因子提交、策略验证与成果展示。</p>
+        </article>
+        <article class="node panel a" style="--d:400ms">
+          <h3>证：能力档案</h3>
+          <p class="small">基于课程学习、平台实训、项目作品、赛事表现等过程数据，沉淀学生 AI量化实践能力档案。</p>
+        </article>
+        <div class="loop-ring"></div>
+        <div class="hex-core a" style="--d:520ms">AI量化<br>人才培养闭环</div>
+      </div>
+    </section>
+
+    <section class="slide service-model" data-slide="8" data-name="service-model">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">Service Model / Job-Course-Certification-Contest</div>
+      </div>
+      <div class="service-layout">
+        <div class="service-head">
+          <h2 class="service-title a" style="--d:60ms">PandaAI「岗-课-证-赛」一体化科教服务模式</h2>
+          <p class="kicker a" style="--d:100ms">以岗位能力模型为起点 → 以课程体系为核心 → 以能力认证为标准 → 以因子赛事为出口，构建高校 AI量化人才培养闭环。</p>
+        </div>
+        <div class="pillar-grid">
+          <article class="pillar a" style="--d:120ms; --tone:#62dbe6">
+            <div class="pillar-head"><strong>岗</strong><span>岗位能力</span></div>
+            <ul>
+              <li>量化研究员 / 因子研究员</li>
+              <li>机器学习量化研究员</li>
+              <li>量化开发工程师 / 数据工程师</li>
+              <li>金融科技产品经理 / 投研支持</li>
+              <li>风险管理分析师 / 量化运营支持</li>
+            </ul>
+            <p class="pillar-note">明确培养方向，让课程设计更贴近真实岗位需求。</p>
+          </article>
+          <article class="pillar a" style="--d:150ms; --tone:#4f9cf5">
+            <div class="pillar-head"><strong>课</strong><span>课程体系</span></div>
+            <ul>
+              <li>多因子研究实战</li>
+              <li>机器学习量化实战</li>
+              <li>深度学习策略应用</li>
+              <li>AI量化工作流训练</li>
+              <li>量化黑客松 / 项目制实训</li>
+            </ul>
+            <p class="pillar-note">将知识学习转化为可操作、可验证、可展示的平台实训任务。</p>
+          </article>
+          <article class="pillar a" style="--d:180ms; --tone:#a876ff">
+            <div class="pillar-head"><strong>证</strong><span>能力认证</span></div>
+            <ul>
+              <li>课程学习认证</li>
+              <li>PandaAI 教师认证</li>
+              <li>赛事获奖认证</li>
+              <li>产业认证探索</li>
+            </ul>
+            <p class="pillar-note">让学习成果、教学能力和赛事表现形成可记录、可评价、可展示的能力证明。</p>
+          </article>
+          <article class="pillar a" style="--d:210ms; --tone:#f2a044">
+            <div class="pillar-head"><strong>赛</strong><span>赛事体系</span></div>
+            <ul>
+              <li>PandaAI 因子大赛</li>
+              <li>高校校内选拔赛</li>
+              <li>校际 AI量化挑战赛</li>
+              <li>量化黑客松</li>
+              <li>机构命题赛 / 专题挑战赛</li>
+            </ul>
+            <p class="pillar-note">通过真实数据、成熟评价体系和机构参与，检验学生 AI量化实践能力。</p>
+          </article>
+        </div>
+        <div class="flow-bar a" style="--d:250ms">闭环：岗位所需能力标准 → 课程培养核心技能 → 认证检验学习成果 → 赛事验证实战能力 → 赛事反馈课程迭代</div>
+        <div class="support-grid">
+          <article class="support-card a" style="--d:290ms; --tone:#62dbe6">
+            <h3>师资培训体系</h3>
+            <p>面向高校教师、实训导师和合作讲师，提供平台培训、课程共建、教学案例开发与实践教学方法支持。</p>
+            <p>入门培训 → 平台实训 → 课程共建 → 教学认证</p>
+          </article>
+          <article class="support-card a" style="--d:330ms; --tone:#4f9cf5">
+            <h3>校企合作模式</h3>
+            <p>围绕 AI量化智能体验实验室、产业学院、实训基地、校中厂等方向，探索高校与 PandaAI 的长期合作空间。</p>
+            <p>AI量化智能体验实验室 / AI金融实践教学基地 / PandaAI 校园实训中心</p>
+          </article>
+          <article class="support-card a" style="--d:370ms; --tone:#a876ff">
+            <h3>全生命周期服务</h3>
+            <p>PandaAI 提供从方案规划、平台部署、课程导入、教师培训、学生实训、赛事组织到成果传播的全周期支持。</p>
+            <p>规划 → 平台 → 课程 → 实训 → 赛事 → 认证 → 就业 → 品牌传播</p>
+          </article>
+        </div>
+        <p class="service-foot a" style="--d:410ms">PandaAI 不只是高校 AI量化教学工具，更是连接岗位能力、课程实训、赛事验证、能力认证、学生就业与学院品牌建设的综合科教服务平台。</p>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="9" data-name="section-04">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">04 / Cooperation Direction</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">04</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">岗｜PandaAI 连接高校学生与产业岗位资源</div>
+          <h2 class="section-title a" style="--d:210ms">岗定方向，<br><span class="accent">资源链接，</span><br><span class="accent">人才输送</span></h2>
+          <p class="subtitle a" style="--d:310ms">从教学与实训出发，继续连接产业岗位、机构资源与优秀学生成长路径。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="10" data-name="job-demand">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">04 / Job Demand</div>
+      </div>
+      <div class="page-layout">
+        <div class="page-head">
+          <h2 class="page-title a">岗：AI量化金融岗位正在形成多层次人才需求</h2>
+          <p class="page-kicker a" style="--d:120ms">从研究到落地，从前台到中后台，AI量化正在重塑金融人才结构。</p>
+        </div>
+        <div class="job-grid">
+          <article class="job-card panel a" style="--d:160ms; --tone:#8cecff">
+            <h3>高精尖研究型岗位</h3>
+            <div class="tag-list">
+              <span>量化研究员</span>
+              <span>机器学习研究员</span>
+              <span>因子研究员</span>
+            </div>
+            <p class="small">面向策略研究、因子发现与模型构建。</p>
+          </article>
+          <article class="job-card panel a" style="--d:220ms; --tone:#a8ffe4">
+            <h3>策略开发与技术实现</h3>
+            <div class="tag-list">
+              <span>量化开发</span>
+              <span>数据工程</span>
+              <span>交易系统开发</span>
+            </div>
+            <p class="small">把研究假设转成可运行、可回测、可迭代的系统。</p>
+          </article>
+          <article class="job-card panel a" style="--d:280ms; --tone:#b88cff">
+            <h3>前台业务与投研支持</h3>
+            <div class="tag-list">
+              <span>产品经理</span>
+              <span>机构服务</span>
+              <span>投研顾问</span>
+            </div>
+            <p class="small">连接产品、客户、研究和业务场景。</p>
+          </article>
+          <article class="job-card panel a" style="--d:340ms; --tone:#ffbd66">
+            <h3>中后台风控与运营</h3>
+            <div class="tag-list">
+              <span>风控分析</span>
+              <span>运营支持</span>
+              <span>数据分析</span>
+              <span>策略监控</span>
+            </div>
+            <p class="small">支撑策略稳定运行和风险可控。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="11" data-name="industry-resources">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">04 / Industry Resources</div>
+      </div>
+      <div class="page-layout photo-story">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">岗｜PandaAI 连接高校学生与产业岗位资源</h2>
+            <p class="page-kicker a" style="--d:120ms">通过平台建设、因子赛事、金融机构合作和产业内容传播，帮助学生形成“学习—实训—竞赛—岗位认知”的衔接路径。</p>
+          </div>
+          <div class="story-list">
+            <article class="story-card a" style="--d:180ms">
+              <h3>私募机构资源对接</h3>
+              <p>第一届因子大赛颁奖典礼现场，15 家私募机构到场参与双选交流，为优秀学生提供产业机构直接接触机会。</p>
+            </article>
+            <article class="story-card a" style="--d:240ms">
+              <h3>证券时报独家 AI 合作资源</h3>
+              <p>围绕金融科技、AI量化与人才培养，连接更高质量的行业认知、岗位需求洞察和产业实践机会。</p>
+            </article>
+            <article class="story-card a" style="--d:300ms">
+              <h3>岗位需求反馈教学</h3>
+              <p>将产业端真实岗位需求反向沉淀为能力模型、课程案例和实训任务。</p>
+            </article>
+          </div>
+        </div>
+        <figure class="image-frame a" style="--d:220ms; height:min(58vh,520px)">
+          <img src="assets/industry-matchmaking.jpeg" alt="PandaAI 因子大赛现场机构交流与双选场景">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="12" data-name="section-course">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">05 / Course System</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">05</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">课｜从岗位实际出发的 AI量化实践教学体系</div>
+          <h2 class="section-title a" style="--d:210ms">岗定方向，<br><span class="accent">资源链接，</span><br><span class="accent">人才输送</span></h2>
+          <p class="subtitle a" style="--d:310ms">从量化入门、多因子研究、机器学习建模到项目实战，逐步完成能力进阶。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="13" data-name="course-system">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">05 / Course System</div>
+      </div>
+      <div class="page-layout">
+        <div class="page-head">
+          <h2 class="page-title a">课｜从岗位实际出发的 AI量化实践教学体系</h2>
+          <p class="page-kicker a" style="--d:120ms">围绕不同基础与培养目标，提供从“理解量化”到“独立完成研究项目”的分层课程体系。</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card a" style="--d:160ms">
+            <div class="num">课程一</div>
+            <h3>多因子线上实战营</h3>
+            <p>面向量化入门岗位，帮助学生从 0 到 1 建立量化投资思维，掌握多因子研究基础框架。</p>
+            <div class="audience">量化小白、主观交易者、金融/经管类学生、理工科学生、AI 爱好者</div>
+          </article>
+          <article class="course-card a" style="--d:210ms">
+            <div class="num">课程二</div>
+            <h3>多因子线下实战营</h3>
+            <p>面向进阶量化研究岗位，围绕机构级多因子研究流程，完成因子构建、评价到策略验证闭环。</p>
+            <div class="audience">进阶学员、金融从业者、研究团队、高校进阶学生</div>
+          </article>
+          <article class="course-card a" style="--d:260ms">
+            <div class="num">课程三</div>
+            <h3>机器学习线上实战营</h3>
+            <p>建立“交易问题—数据特征—算法选择—模型验证—策略上线”的完整认知链路。</p>
+            <div class="audience">有多因子基础、代码基础，进入机器学习量化方向的学生</div>
+          </article>
+          <article class="course-card a" style="--d:310ms">
+            <div class="num">课程四</div>
+            <h3>机器学习线下实战营</h3>
+            <p>聚焦前沿 AI 技术与论文级策略复现，训练理论理解、代码实现和策略落地综合能力。</p>
+            <div class="audience">高阶学员、策略研究员、机构团队、研究生</div>
+          </article>
+          <article class="course-card a" style="--d:360ms">
+            <div class="num">课程五</div>
+            <h3>量化黑客松</h3>
+            <p>围绕真实研究课题进行限时开发、策略路演与成果评估，形成可展示项目作品。</p>
+            <div class="audience">学生项目团队、机构用户、赛事/工作坊学员</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="14" data-name="course-practice">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">05 / Teaching Practice</div>
+      </div>
+      <div class="page-layout practice-layout">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">课：PandaAI 已沉淀成熟的 AI量化教学实践经验</h2>
+          </div>
+          <div class="story-list">
+            <article class="story-card a" style="--d:160ms">
+              <h3>30+期课程办学经验</h3>
+              <p>持续开展 AI量化实战课程，覆盖多因子研究、机器学习量化、深度学习策略等方向。</p>
+            </article>
+            <article class="story-card a" style="--d:220ms">
+              <h3>覆盖完整能力链路</h3>
+              <p>从量化认知、因子构建、因子评价、模型训练到策略验证，建立完整 AI量化研究框架。</p>
+            </article>
+            <article class="story-card a" style="--d:280ms">
+              <h3>贴近岗位需求的教学实战</h3>
+              <p>围绕真实岗位能力，完成研究假设、数据处理、因子构建、模型验证到策略表达的实践流程。</p>
+            </article>
+          </div>
+        </div>
+        <div class="proof-collage a" style="--d:220ms">
+          <figure class="image-frame"><img src="assets/course-practice-a.png" alt="PandaAI 课程实践截图"></figure>
+          <figure class="image-frame contain"><img src="assets/course-practice-vertical.png" alt="PandaAI 课程长图展示"></figure>
+          <figure class="image-frame"><img src="assets/course-practice-b.png" alt="PandaAI 课程实践案例"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="15" data-name="section-contest">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">06 / Factor Contest</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">06</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">赛｜以高含金量因子大赛检验 AI量化实践能力</div>
+          <h2 class="section-title a" style="--d:210ms">真实数据，<br><span class="accent">统一评价，</span><br><span class="accent">机构参与</span></h2>
+          <p class="subtitle a" style="--d:310ms">用赛事把课程实训成果放到真实评价体系中检验。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="16" data-name="contest-system">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">06 / Contest System</div>
+      </div>
+      <div class="page-layout contest-layout">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">赛：以高含金量因子大赛检验 AI量化实践能力</h2>
+            <p class="page-kicker a" style="--d:120ms">围绕真实量化研究流程，形成从因子提交、指标评价、榜单排名到机构双选的完整赛事体系。</p>
+          </div>
+          <div class="stat-card a" style="--d:180ms">
+            <div class="stat-number">3万+人</div>
+            <p class="small">累计参与；第三届超 1.2 万人参与，覆盖高校学生、量化爱好者、金融从业者与技术背景学习者。</p>
+          </div>
+          <div class="contest-points">
+            <article class="mini-point a" style="--d:240ms"><h3>检验体系</h3><p>成熟因子检验体系，综合考察有效性、稳定性、可解释性与长期表现。</p></article>
+            <article class="mini-point a" style="--d:300ms"><h3>机构参与</h3><p>连接量化私募、券商与金融科技企业，让优秀参赛者接触真实产业场景。</p></article>
+            <article class="mini-point a" style="--d:360ms"><h3>产业连接</h3><p>将机构能力要求前置到教学与赛事过程，沉淀学生作品集与推荐资源。</p></article>
+          </div>
+        </div>
+        <figure class="image-frame a" style="--d:220ms; height:min(58vh,520px)">
+          <img src="assets/contest-system.png" alt="PandaAI 因子大赛峰会现场">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="17" data-name="winner-outcomes">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">06 / Student Outcomes</div>
+      </div>
+      <div class="page-layout winner-layout">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">赛：从参赛到成长，优秀选手形成可展示的实践成果</h2>
+            <p class="page-kicker a" style="--d:120ms">学生在真实数据和统一评价体系下完成因子研究，并沉淀为项目经历、研究成果和职业能力证明。</p>
+          </div>
+          <div class="bottom-callout a" style="--d:220ms">获奖选手全媒体曝光：全网展示量超 500w，成为高校重点案例。</div>
+        </div>
+        <div class="phone-pair a" style="--d:220ms">
+          <figure class="image-frame contain"><img src="assets/winner-showcase-a.png" alt="高校获奖案例媒体报道截图"></figure>
+          <figure class="image-frame contain"><img src="assets/winner-showcase-b.png" alt="PandaAI 因子大赛优秀选手报道截图"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="18" data-name="section-certification">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">07 / Certification</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">07</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">证｜共建 AI量化能力认证体系</div>
+          <h2 class="section-title a" style="--d:210ms">课程认证，<br><span class="accent">教师认证，</span><br><span class="accent">赛事认证</span></h2>
+          <p class="subtitle a" style="--d:310ms">并探索与产业评价体系协同，形成可记录、可展示、可评价的能力证明。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="19" data-name="certification-system">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">07 / Certification System</div>
+      </div>
+      <div class="page-layout">
+        <div class="page-head">
+          <h2 class="page-title a">证｜共建 AI量化能力认证体系</h2>
+          <p class="page-kicker a" style="--d:120ms">通过“课程认证—教师认证—赛事认证—产业认证探索”，共同建设 AI量化人才培养的能力评价体系。</p>
+        </div>
+        <div class="cert-grid">
+          <article class="cert-card a" style="--d:160ms"><div class="cert-num">01</div><h3>课程学习认证</h3><p>记录课程学习、平台任务、项目报告与实训成果，形成阶段性学习证明。</p></article>
+          <article class="cert-card a" style="--d:220ms"><div class="cert-num">02</div><h3>PandaAI 教师认证</h3><p>通过平台培训、课程共建和教学案例开发，培养 AI量化实践教学师资力量。</p></article>
+          <article class="cert-card a" style="--d:280ms"><div class="cert-num">03</div><h3>赛事获奖认证</h3><p>基于赛事排名、获奖结果、研究报告和评审反馈，沉淀真实实践能力证明。</p></article>
+          <article class="cert-card a" style="--d:340ms"><div class="cert-num">04</div><h3>产业认证探索</h3><p>探索与相关人才评价体系、行业机构和高校继续教育体系协同，推动标准化。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="20" data-name="cooperation-intro">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">08 / Cooperation Landing</div>
+      </div>
+      <div class="page-layout">
+        <div class="page-head">
+          <div class="eyebrow a">合作落地｜高校 × PandaAI 共建模式</div>
+          <h2 class="page-title a" style="--d:110ms">共同建设 AI量化实践教学体系</h2>
+          <p class="page-kicker a" style="--d:190ms">PandaAI 可与高校围绕课程教学、平台实训、赛事组织与能力认证，共同推动学生从课堂学习走向真实量化研究场景。</p>
+        </div>
+        <div class="flow-chain a" style="--d:280ms">
+          <span>课程教学</span>
+          <span>平台实训</span>
+          <span>赛事组织</span>
+          <span>能力认证</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="21" data-name="cooperation-mode">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">08 / Co-Build Mode</div>
+      </div>
+      <div class="page-layout">
+        <div class="page-head">
+          <h2 class="page-title a">合作落地｜高校 × PandaAI 共建模式</h2>
+          <p class="page-kicker a" style="--d:120ms">PandaAI 希望成为高校 AI量化实践教学的工具平台、课程伙伴、赛事载体与能力认证共建方。</p>
+        </div>
+        <div class="mode-grid">
+          <article class="mode-card a" style="--d:160ms"><h3>PandaAI 提供平台与内容支持</h3><p>提供 AI量化实践平台、课程案例、平台账号、实训任务、赛事系统与教学支持，帮助高校快速搭建环境。</p></article>
+          <article class="mode-card a" style="--d:220ms"><h3>高校负责教学组织与人才培养</h3><p>结合专业方向与课程安排，组织学生参与课程学习、平台实训、项目实践、校内赛事与成果展示。</p></article>
+          <article class="mode-card a" style="--d:280ms"><h3>双方共建课程与实训项目</h3><p>围绕金融工程、金融科技、人工智能、数据科学等相关专业，共同开发实训课程、实践项目与教学案例。</p></article>
+          <article class="mode-card a" style="--d:340ms"><h3>共同沉淀教学成果与能力标准</h3><p>通过课程成果、项目报告、赛事成绩、教师认证与学生认证，形成教学成果库和能力评价体系。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="22" data-name="brand-exposure">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">08 / Brand Exposure</div>
+      </div>
+      <div class="page-layout">
+        <div class="page-head">
+          <h2 class="page-title a">高校品牌曝光与成果共建</h2>
+          <p class="page-kicker a" style="--d:120ms">共创高校 AI金融教育品牌影响力，把课程、赛事、成果和传播打通。</p>
+        </div>
+        <div class="brand-grid">
+          <article class="brand-card a" style="--d:160ms"><h3>联合课程品牌</h3><p>共同打造 AI量化实践课程、实验课程、工作坊或实训营，形成学院特色教学项目。</p></article>
+          <article class="brand-card a" style="--d:220ms"><h3>联合赛事品牌</h3><p>围绕因子大赛、校内选拔赛、AI量化挑战赛等形式，打造高校专属赛事活动。</p></article>
+          <article class="brand-card a" style="--d:280ms"><h3>联合成果展示</h3><p>沉淀学生项目作品、优秀因子案例、获奖发言、研究报告和实践成果集。</p></article>
+          <article class="brand-card a" style="--d:340ms"><h3>联合传播曝光</h3><p>通过 PandaAI 内容矩阵、证券时报等行业合作资源、活动报道和视频内容，共同放大品牌声量。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="23" data-name="media-matrix">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">08 / Media Matrix</div>
+      </div>
+      <div class="page-layout media-layout">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">更多合作与曝光</h2>
+            <p class="page-kicker a" style="--d:120ms">自媒体矩阵全网粉丝超 30w，保持持续稳定增长趋势；多账号连续产出多平台、多类型的垂类爆款。</p>
+          </div>
+          <div class="bottom-callout a" style="--d:220ms">【具体合作方式内容待补充】</div>
+        </div>
+        <div class="media-shots a" style="--d:220ms">
+          <figure class="image-frame contain"><img src="assets/media-matrix-a.png" alt="PandaAI 自媒体矩阵截图一"></figure>
+          <figure class="image-frame contain"><img src="assets/media-matrix-b.png" alt="PandaAI 自媒体矩阵截图二"></figure>
+          <figure class="image-frame contain"><img src="assets/media-matrix-c.png" alt="PandaAI 自媒体矩阵截图三"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="24" data-name="lab-cooperation">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">08 / Lab Co-Build</div>
+      </div>
+      <div class="page-layout lab-layout">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">更多合作与曝光｜高校实验室共建</h2>
+            <p class="page-kicker a" style="--d:120ms">人工智能与金融科技联合实验室，围绕 Trading Agent、多智能体协同、自动化因子挖掘、金融时序大模型、实盘量化策略等展开研究。</p>
+          </div>
+          <div class="bottom-callout a" style="--d:220ms">PandaAI 期待与更多高校开展 AI金融智能实验室共建。</div>
+        </div>
+        <div class="lab-shots a" style="--d:220ms">
+          <figure class="image-frame"><img src="assets/lab-coop-photo.jpeg" alt="人工智能与金融科技联合实验室揭牌现场"></figure>
+          <figure class="image-frame contain"><img src="assets/lab-coop-a.png" alt="实验室共建资料截图一"></figure>
+          <figure class="image-frame contain"><img src="assets/lab-coop-b.png" alt="实验室共建资料截图二"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section" data-slide="25" data-name="section-plans">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">09 / Cooperation Plan</div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-number a">09</div>
+        <div class="section-copy">
+          <div class="eyebrow a" style="--d:120ms">合作方案｜浙江金融职业学院 × PandaAI</div>
+          <h2 class="section-title a" style="--d:210ms">三种交付模式，<br><span class="accent">匹配不同部署深度</span></h2>
+          <p class="subtitle a" style="--d:310ms">从纯 Web 端、组合部署到全本地化部署，按学校预算、算力和数据要求选择。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="26" data-name="plan-a">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">Plan A / Web Delivery</div>
+      </div>
+      <div class="plan-layout">
+        <div class="page-head">
+          <h2 class="page-title a">合作方案A：纯Web端教学平台交付模式</h2>
+        </div>
+        <div class="plan-table a" style="--d:160ms">
+          <div class="plan-row head" style="--tone:#8cecff"><div class="plan-cell">交付产品或服务名称</div><div class="plan-cell">交付方式</div><div class="plan-cell">交付内容</div><div class="plan-cell">市场报价</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>Panda AI 浙金院教育版专属平台</strong>纯 WEB 端版本</div><div class="plan-cell">云端网页版本</div><div class="plan-cell">以官网教学相关模块为主，结合学校教学场景专属模板和 SKILL；无需本地部署，共享现有服务器资源及后台数据调取资源。</div><div class="plan-cell">15万/首年</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>Web端算力使用费</strong></div><div class="plan-cell">按照调用计费</div><div class="plan-cell">算力</div><div class="plan-cell">按使用量计费</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>量变学院课程体系</strong></div><div class="plan-cell">课程共建或输出</div><div class="plan-cell">课程体系及师资培训</div><div class="plan-cell">15万/首年</div></div>
+        </div>
+        <div class="plan-total a" style="--d:260ms">首年优惠打包价：30万/年（不含算力使用费）</div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="27" data-name="plan-b">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">Plan B / Hybrid Delivery</div>
+      </div>
+      <div class="plan-layout">
+        <div class="page-head">
+          <h2 class="page-title a">合作方案B：“WEB端+部分本地部署”组合交付模式</h2>
+        </div>
+        <div class="plan-table a" style="--d:160ms">
+          <div class="plan-row head" style="--tone:#a8ffe4"><div class="plan-cell">交付产品或服务名称</div><div class="plan-cell">交付方式</div><div class="plan-cell">交付内容</div><div class="plan-cell">市场报价</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>Panda AI 浙金院教育版专属平台</strong>基于行情数据库和工作流的本地化部署版本</div><div class="plan-cell">本地数据库和工作流本地化部署，大模型通过 WEB 端调用</div><div class="plan-cell">教学模块结合学校场景专属模板和 SKILL；部分功能本地化部署提升内测速度，大模型共享 PandaAI 现有服务器以节约成本。</div><div class="plan-cell">35万/首年</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>算力使用费</strong></div><div class="plan-cell">按照调用计费</div><div class="plan-cell">仅针对大模型调用部分的算力消耗</div><div class="plan-cell">按使用量计费</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>服务器</strong></div><div class="plan-cell">可自采或者代采</div><div class="plan-cell">结合系统定制开发内容选择</div><div class="plan-cell">待确认</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>量变学院课程体系</strong></div><div class="plan-cell">课程共建或输出</div><div class="plan-cell">课程体系及师资培训</div><div class="plan-cell">15万/首年</div></div>
+        </div>
+        <div class="plan-total a" style="--d:260ms">优惠打包价：50万/年（不含算力使用费和服务器成本）</div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="28" data-name="plan-c">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">Plan C / Local Delivery</div>
+      </div>
+      <div class="plan-layout">
+        <div class="page-head">
+          <h2 class="page-title a">合作方案C：全本地化部署系统交付模式</h2>
+        </div>
+        <div class="plan-table a" style="--d:160ms">
+          <div class="plan-row head" style="--tone:#b88cff"><div class="plan-cell">交付产品或服务名称</div><div class="plan-cell">交付方式</div><div class="plan-cell">交付内容</div><div class="plan-cell">市场报价</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>Panda AI 浙金院教育版专属平台</strong>本地化部署版本</div><div class="plan-cell">大模型、数据库和工作流全部本地化部署</div><div class="plan-cell">教学模块结合学校场景专属模板和 SKILL；全部本地化后可实现本地数据更新及跑测，最大化节约算力成本。</div><div class="plan-cell">60万/首年</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>服务器</strong></div><div class="plan-cell">可自采或者代采</div><div class="plan-cell">结合系统定制开发内容选择</div><div class="plan-cell">待确认</div></div>
+          <div class="plan-row"><div class="plan-cell"><strong>量变学院课程体系</strong></div><div class="plan-cell">课程共建或输出</div><div class="plan-cell">课程体系及师资培训</div><div class="plan-cell">15万/首年</div></div>
+        </div>
+        <div class="plan-total a" style="--d:260ms">首年优惠打包价：75万（不含服务器成本）</div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="29" data-name="tonghuashun-positioning">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">Appendix / Positioning</div>
+      </div>
+      <div class="page-layout compare-layout">
+        <div>
+          <div class="page-head">
+            <h2 class="page-title a">附：Panda AI 同花顺系统的协同定位</h2>
+          </div>
+          <div class="compare-stack">
+            <article class="compare-card a" style="--d:160ms"><h3>同花顺：工具型产品</h3><p>行情数据终端 + 交易执行环境 + 金融信息数据源，解决“用什么工具看市场”的问题。</p></article>
+            <article class="compare-card a" style="--d:220ms"><h3>Panda AI：解决方案型产品</h3><p>AI 智能体驱动的研究方法论 + 量化策略思维训练 + 从想法到回测的闭环，解决“怎么用 AI 做研究”的问题。</p></article>
+          </div>
+        </div>
+        <div>
+          <div class="bottom-callout a" style="--d:260ms">建议协同模式：在同花顺提供的交易和数据基础设施之上，叠加 Panda AI 的 AI 研究能力层。</div>
+          <div class="flow-chain a" style="--d:340ms">
+            <span>数据<br>同花顺 API</span>
+            <span>研究<br>Panda AI 智能体</span>
+            <span>验证<br>Panda AI 回测引擎</span>
+            <span>执行<br>Panda AI 仿真交易</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide thanks-slide" data-slide="30" data-name="thanks">
+      <div class="topline">
+        <div class="brand"><span class="mark"></span>PandaAI</div>
+        <div class="running">End</div>
+      </div>
+      <div>
+        <h2 class="thanks-title a">感谢收看！</h2>
+        <p class="thanks-sub a" style="--d:180ms">PandaAI ｜ AI量化人才培养科教方案</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Slide controls">
+    <button type="button" id="prevBtn" data-prev aria-label="Previous slide">Prev</button>
+    <button type="button" id="nextBtn" data-next aria-label="Next slide">Next</button>
+    <button type="button" id="replayBtn" data-replay aria-label="Replay current slide">Replay</button>
+    <button type="button" id="loopBtn" data-loop aria-pressed="false" aria-label="Toggle live loop">Loop</button>
+    <span class="counter" id="counter">1 / 31</span>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    const progressBar = document.getElementById('progressBar');
+    const loopBtn = document.getElementById('loopBtn');
+    let index = 0;
+    let loop = false;
+    let timer = null;
+    const delay = 5200;
+
+    function setActive(i, replay = false) {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((slide, n) => {
+        slide.classList.toggle('active', n === index);
+        if (replay && n === index) {
+          slide.querySelectorAll('.a').forEach(el => {
+            el.style.animation = 'none';
+            void el.offsetWidth;
+            el.style.animation = '';
+          });
+        }
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      progressBar.style.width = `${((index + 1) / slides.length) * 100}%`;
+      if (loop) schedule();
+    }
+
+    function next() { setActive(index + 1); }
+    function prev() { setActive(index - 1); }
+    function replay() { setActive(index, true); }
+
+    function schedule() {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(next, delay);
+    }
+
+    function toggleLoop() {
+      loop = !loop;
+      loopBtn.classList.toggle('on', loop);
+      loopBtn.setAttribute('aria-pressed', String(loop));
+      if (loop) schedule();
+      else window.clearTimeout(timer);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', next);
+    document.getElementById('prevBtn').addEventListener('click', prev);
+    document.getElementById('replayBtn').addEventListener('click', replay);
+    loopBtn.addEventListener('click', toggleLoop);
+
+    window.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === ' ') next();
+      if (event.key === 'ArrowLeft') prev();
+      if (event.key.toLowerCase() === 'r') replay();
+      if (event.key.toLowerCase() === 'l') toggleLoop();
+    });
+
+    function startIndexFromUrl() {
+      const raw = new URLSearchParams(window.location.search).get('slide');
+      if (!raw) return 0;
+      const parsed = Number.parseInt(raw, 10);
+      if (!Number.isFinite(parsed)) return 0;
+      return Math.max(0, Math.min(slides.length - 1, parsed - 1));
+    }
+
+    window.showSlide = (i, replayAnimation = true) => setActive(i, replayAnimation);
+    window.goTo = window.showSlide;
+
+    window.__deckCheck = () => ({
+      slides: slides.length,
+      activeSlides: document.querySelectorAll('.slide.active').length,
+      current: index + 1,
+      overflow: slides.map((slide, n) => ({
+        slide: n,
+        name: slide.dataset.name,
+        overflowX: slide.scrollWidth > slide.clientWidth + 1,
+        overflowY: slide.scrollHeight > slide.clientHeight + 1
+      })),
+      controls: Boolean(document.querySelector('.controls')),
+      progress: progressBar.style.width
+    });
+
+    setActive(startIndexFromUrl(), true);
+  </script>
+</body>
+</html>
